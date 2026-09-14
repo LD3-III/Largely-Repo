@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up for the Ministry of Silly Walks</title>
+  <style>
+    body {
+      font-family: Comic Sans MS, sans-serif;
+      background-color: #fff4e0;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 4px dashed #ff6f61;
+      border-radius: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ff6f61;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🦆 Join the Ministry of Silly Walks! 🦆</h1>
+  <p>Fill out the form below to become an official Silly Walker.</p>
+
+  <form action="/submit-silly-form" method="post">
+
+    <label for="name">Your Silly Name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Sir Wobbles-a-Lot">
+
+    <label for="email">Your Email (for silly newsletters):</label>
+    <input type="email" id="email" name="email" placeholder="you@silliness.com">
+
+    <label>Pick Your Walk Style:</label>
+    <input type="radio" id="wobble" name="walkstyle" value="wobble">
+    <label for="wobble">The Wobble</label>
+
+    <input type="radio" id="bounce" name="walkstyle" value="bounce">
+    <label for="bounce">The Bounce</label>
+
+    <input type="radio" id="highkick" name="walkstyle" value="highkick">
+    <label for="highkick">The High Kick</label>
+
+    <label for="hat">Choose Your Silly Hat:</label>
+    <select id="hat" name="hat">
+      <option value="propeller">Propeller Beanie</option>
+      <option value="top">Oversized Top Hat</option>
+      <option value="traffic-cone">Traffic Cone</option>
+    </select>
+
+    <label for="reason">Why do you want to join?</label>
+    <textarea id="reason" name="reason" rows="4" cols="30" placeholder="I have always dreamed of walking sillier..."></textarea>
+
+    <input type="submit" value="Enroll Me in Silliness!">
+
+  </form>
+
+</body>
+</html>
