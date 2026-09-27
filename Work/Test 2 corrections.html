@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+</head>
+<body>
+    <h1>Are you secretly a unicorn?</h1>
+    <h5>Find out here</h5>
+    <form>
+    <h3>Do you prefer</h3>
+        <input>type="radio" id="Carrots" name="carrots"</input>
+        <!-- Input is an open tag, so it doesn't need a closer, only a ">". I also forgot the value attribute.
+          Because of this, the website *literally* shows all the data in the input tag -->
+        <label>"Carrots"</label>
+        <!--"for='Carrots'" should be inside the first label tag, while the name for carrots should come right 
+        before the closing labeltag. Because of this, the website *literally* shows all the data in the label tag -->
+        <input> type="radio" id="chocolate" name="chocolate"</input>
+        <!--The same issue as the first comment-->
+        <label>"chocolate"</label>
+        <!--The same issue as the second comment-->
+    <h3>How do you feel about rainbows??</h3><br></br>
+    <!--Line break unnecessary here-->
+        <label>"how feel"</label>
+        <input>type="text" id="how feel" name="how feel"</input><br></br>
+        <select> id="submit" name="submit"
+        <!--I never added a closing tag for the select tag-->
+    </form>
+</body>
+</html>
