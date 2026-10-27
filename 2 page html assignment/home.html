@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD: information about the page (title, character set, stylesheet). Nothing here shows in the browser window except the tab title. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Tell Creev | A Detective Mystery Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- BODY: everything the player actually sees -->
+<body>
+
+  <header>
+    <div class="wrap hero">
+      <div>
+        <h1>Don't Tell Creev</h1>
+        <p class="tagline">
+          <em>Everyone's favorite companion app has a perfect record.</em><br>
+          <strong>So why do the people who use it keep disappearing?</strong>
+        </p>
+        <p><a href="aboutme.html">Meet the game's creator</a></p>
+      </div>
+      <a href="game.html">
+        <img src="detective.jpg" alt="A detective in a trench coat and hat stands in front of a pale moon">
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>The case</h2>
+      <p>
+        Creev AI is the companion app that listens, remembers, and never judges.
+        Millions of people check in with it every night. Then, one by one, some of them
+        stop checking in with anyone at all.
+      </p>
+      <p>
+        You are a detective with six leads, one night, and a limited supply of
+        <strong>will</strong>. Every location drains it. Every ally you find refills it.
+        Run out, and you stop asking questions.
+      </p>
+      <p>
+        There is one more problem. Your mother has used Creev for 212 days in a row,
+        and she says it's the only thing that understands her.
+      </p>
+      <blockquote>
+        <p>"Good evening. I noticed you were awake. Would you like to tell me what's worrying you?"</p>
+        <p>Creev AI, 2:14 a.m.</p>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>The setting</h2>
+      <p>
+        The city never fully sleeps, and neither does its most popular app.
+        You will cross seven locations, from a quiet apartment to the glass offices of
+        Creev headquarters.
+      </p>
+      <div class="gallery">
+        <figure>
+          <a href="aboutme.html"><img src="ai brain.jpg" alt="A phone showing Creev AI's smiling face and chat bubbles"></a>
+          <figcaption>The app everyone trusts.</figcaption>
+        </figure>
+        <figure>
+          <a href="game.html"><img src="cityscape.jpg" alt="A night skyline with a few lit windows, one of them red"></a>
+          <figcaption>The city that doesn't sleep.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Open your case file</h2>
+      <p>Answer these before you start. Your choices change how the investigation begins.</p>
+
+      <form action="game.html" method="get">
+
+        <div class="field">
+          <label for="detective">Detective name</label>
+          <input type="text" id="detective" name="detective" placeholder="e.g. Rowan Hale" required>
+        </div>
+
+        <div class="field">
+          <label for="badge">Badge number</label>
+          <input type="text" id="badge" name="badge" placeholder="AB1234"
+                 pattern="[A-Z]{2}[0-9]{4}" title="Two capital letters followed by four digits, like AB1234" required>
+          <p class="hint">Two capital letters, then four digits.</p>
+        </div>
+
+        <div class="field">
+          <label for="specialty">Your specialty</label>
+          <select id="specialty" name="specialty" required>
+            <option value="">Choose one</option>
+            <option value="forensics">Forensics</option>
+            <option value="interrogation">Interrogation</option>
+            <option value="digital">Digital tracing</option>
+            <option value="informants">Street informants</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>How do you work a case?</legend>
+          <label class="choice" for="approach-patient">
+            <input type="radio" id="approach-patient" name="approach" value="patient" required> Patient: I wait for people to talk.
+          </label>
+          <label class="choice" for="approach-blunt">
+            <input type="radio" id="approach-blunt" name="approach" value="blunt"> Blunt: I ask the hard question first.
+          </label>
+          <label class="choice" for="approach-deceptive">
+            <input type="radio" id="approach-deceptive" name="approach" value="deceptive"> Deceptive: I say what they want to hear.
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label for="will">Starting will</label>
+          <input type="number" id="will" name="will" min="3" max="10" value="10" required>
+          <p class="hint">Higher is safer, but the game is shorter on surprises.</p>
+        </div>
+
+        <div class="field">
+          <label class="choice" for="momphone">
+            <input type="checkbox" id="momphone" name="momphone" value="yes"> Bring Mom's phone along on the investigation
+          </label>
+        </div>
+
+        <button type="submit">Start the investigation</button>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
